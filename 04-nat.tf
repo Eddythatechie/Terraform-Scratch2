@@ -1,6 +1,6 @@
 resource "aws_nat_gateway" "ngw" {
     allocation_id = aws_eip.main.id
-    subnet_id = "subnet-0b75e0f2d96403f25"
+    subnet_id = aws_subnet.lizzo_subnet1a.id 
 
     tags = {
       Name = "ngw"
